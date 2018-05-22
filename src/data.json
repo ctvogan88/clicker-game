@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "image": "/assets/images/ebbets_field.jpg",
+      "clicked": false
+    },
+    {
+      "id": 2,
+      "image": "/assets/images/forbes_field.jpg",
+      "clicked": false
+    },
+    {
+      "id": 3,
+      "image": "/assets/images/jack_murphy_stadium.jpg",
+      "clicked": false
+    },
+    {
+      "id": 4,
+      "image": "/assets/images/league_park.jpg",
+      "clicked": false
+    },
+    {
+        "id": 5,
+        "image": "/assets/images/los_angeles_wrigley_field.jpg",
+        "clicked": false
+      },
+      {
+        "id": 6,
+        "image": "/assets/images/tiger_stadium.jpg",
+        "clicked": false
+      },
+      {
+        "id": 7,
+        "image": "/assets/images/colt_stadium.jpg",
+        "clicked": false
+      },
+      {
+        "id": 8,
+        "image": "/assets/images/braves_field.jpg",
+        "clicked": false
+      },
+      {
+        "id": 9,
+        "image": "/assets/images/griffith_stadium.jpg",
+        "clicked": false
+      },
+      {
+        "id": 10,
+        "image": "/assets/images/yankee_stadium.jpg",
+        "clicked": false
+      },
+      {
+        "id": 11,
+        "image": "/assets/images/shibe_park.jpg",
+        "clicked": false
+      },
+      {
+        "id": 12,
+        "image": "/assets/images/los_angeles_coliseum.jpg",
+        "clicked": false
+      }
+
+]
