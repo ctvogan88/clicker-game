@@ -4,7 +4,7 @@ import "./Footer.css";
 const Footer = () => (
     <footer className="footer">
         <div className="bottom">
-        Hall of Famer Clicker! <img alt="react" src="assets/images/react.svg" />
+        <a href="https://www.ballparksofbaseball.com/past-ballparks/"/>Images and information provided by BallparksofBaseball.com <img alt="skullicon" src="../../public/assets/images/favicon.ico" />
         </div>
     </footer>
 );

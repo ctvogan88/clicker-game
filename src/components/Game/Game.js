@@ -5,6 +5,7 @@ import Container from "../Container";
 import ClickItem from "../ClickItem";
 import Footer from "../Footer";
 import data from "../../data.json";
+import Favicon from 'react-favicon';
 //import { Link } from 'react-router-dom';
 
 class Game extends Component {
@@ -34,14 +35,18 @@ class Game extends Component {
     }
 
     handleCorrectGuess = newData => {
+        //console.log(newData);
+        
         const { topScore, score } = this.state;
         const newScore = score + 1;
+        console.log(newScore);
         const newTopScore = newScore > topScore ? newScore : topScore;
         this.setState({
             data: this.shuffleData(newData),
             score: newScore,
             topScore: newTopScore
         });
+        //console.log(this.state.score);
     };
 
     handleIncorrectGuess = data => {
@@ -73,8 +78,17 @@ class Game extends Component {
      };
 
      handleItemClick = id => {
+        console.log(id + "! ");
+        const { topScore, score } = this.state;
+        const newScore = score + 1;
+        this.setState({
+            score: newScore
+        });
+        
+
         let guessedCorrectly = false;
         const newData = this.state.data.map(item => {
+            //console.log({...item});
             const newItem = { ...item };
                 if (newItem.id === id) {
                     if (!newItem === id) {
@@ -87,6 +101,7 @@ class Game extends Component {
             guessedCorrectly
             ? this.handleCorrectGuess(newData)
             : this.handleIncorrectGuess(newData);
+            console.log(newData);
         };
 
 
@@ -107,7 +122,7 @@ class Game extends Component {
                     ))}
             </Container>
             <Footer />
-            <nav id="sidebar" className={this.state.sideBar ? "" : "active"}>
+            {/* <nav id="sidebar" className={this.state.sideBar ? "" : "active"}>
 
                     <div className="sidebar-header">
                         <h3>Whistlr</h3>
@@ -115,7 +130,7 @@ class Game extends Component {
                     </div>
 
 
-                    {/* <ul className="list-unstyled components">
+                    <ul className="list-unstyled components">
                         <li>
                             <Link to="/">
                                 <i className="glyphicon glyphicon-home"></i>
@@ -135,7 +150,7 @@ class Game extends Component {
                                 Log Out
                     </a>
                         </li>
-                    </ul> */}
+                    </ul>
             <button onClick={() => { this.toggleSide() }} type="button" id="sidebarCollapse" className="btn btn-primary navbar-btn">
                     <i className="glyphicon glyphicon-resize-horizontal"></i>
                     </button>
@@ -144,11 +159,12 @@ class Game extends Component {
                 <div id="content" className={this.state.sideBar ? "" : "contentActive"}>
                     <div className="row contentBody">
                         <div className="col-sx-12">
-                            {/* <Posts /> */}
+                            <Posts /> 
                         </div>
                     </div>
 
-                </div>
+                </div> */}
+            <Favicon url="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/skull.png" />
             </div>
          );
      }
